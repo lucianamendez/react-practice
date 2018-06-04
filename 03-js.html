@@ -1,0 +1,41 @@
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.6.1/prop-types.js"></script>
+    <script type="text/babel">
+
+    // function Message ({message}){
+    //     if (!message){
+    //         return <div>No Message</div>
+    //     }
+    //     return <div>{message}</div>
+    // }
+    
+    // function Message ({message}){
+    //     if (!message){
+    //         return React.createElement('div', null,'No Message')
+    //     }
+    //     return React.createElement('div', null, message)
+    // }
+
+    // function Message ({message}){
+    //     return message ? React.createElement ('div', null, message) :  React.createElement('div', null,'No Message')
+    // }
+
+    // function Message ({message}){
+    //     return (<div> {message ? React.createElement ('div', null, message) :  React.createElement('div', null,'No Message')}</div>)
+    // }
+
+    function Message ({message}){
+        return (<div> {message ? <div>{message}</div> : <div>No Message</div>}</div>)
+    }
+
+    ReactDOM.render(
+        <Message message ={null}/>,
+        document.getElementById('root'),
+    )
+
+</script>
+</body>
